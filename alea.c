@@ -13,8 +13,6 @@ int main() {
     puts("Escreva 10 números entre 1 e 100");
     for (unsigned short i = 0; i < 10; i++) {
         num_esc[i] = rand() % 100 + 1;
-     //   scanf("%hu", &nums[i]);
-    //    printf("%hd\n", num_esc[i]);
     }
     
     for (unsigned short i = 0; i < 10; i++) {
@@ -34,7 +32,6 @@ int main() {
         }
         }
         }
-    //    printf("%hd\n", num_esc[i]);
     }
     
 #if debug
@@ -48,11 +45,8 @@ int main() {
     for (unsigned short i = 1; i <= 100; i++) {
       bool aserto = false;
       for (unsigned short j = 0; j < 10; j ++) {
-        /*if (i == num_esc[j]) {
-          printf(" X");
-          aserto = true; */
           for (unsigned short k = 0; k < 10; k++)
-          if (num_esc[j] == nums[k]) {
+          if (i == num_esc[j] && num_esc[j] == nums[k]) {
           printf(" X");
           aserto = true;
           armazenar[asertou_cont] = nums[k];
